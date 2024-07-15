@@ -9,7 +9,7 @@
     &::before {
         content: "";
         background-image: linear-gradient(90deg, #000000 0%, #00000075 69%);
-        opacity: 0.76;
+        opacity: 0.35;
         position: absolute;
         top: 0;
         left: 0;
@@ -1558,6 +1558,7 @@
 
 .experience-section {
     margin-top: 7rem;
+    background: #f2f2f2;
 
     .owl-item.active:not(.center) {
         .col .card {
@@ -2220,3 +2221,107 @@
         }
     }
 }
+.gallery-home {
+  .container{
+    position: relative;
+  }
+    .col-md-4 {
+      background: $colorPrimary;
+      position: relative;
+  
+  
+      @include respond (minWidth768) {
+        padding-right: 0;
+      }
+  
+      &::before {
+        content: "";
+        background: $colorPrimary;
+        position: absolute;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+  
+        @include respond (maxWidth768) {
+          content: none;
+        }
+      }
+    }
+  
+    .col-md-4,
+    .col-md-8 {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+  
+      @include respond(maxWidth992) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+  
+      @include respond(maxWidth768) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+    }
+  
+    .nav {
+      flex-direction: column;
+      border-bottom: none;
+  
+      .nav-link {
+        color: $colorWhite;
+        border-radius: 0;
+        border: none !important;
+        font-size: 21px;
+        text-align: left;
+        line-height: 30px;
+        font-weight: 400;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 15px 0 15px 30px;
+        border: none;
+        margin-right: 0;
+        letter-spacing: 0.57px;
+        border-radius: 0;
+  
+        @include respond (minWidth768) {
+          border-left: 5px solid transparent !important;
+        }
+  
+        @include respond (maxWidth768) {
+          padding: 7px 0 7px 15px;
+          font-size: 14px;
+          font-weight: 600;
+        }
+  
+        &:hover {
+          border: transparent;
+          background-color: #e2e2e2;
+          color: #000;
+  
+          @include respond (minWidth768) {
+            border-left: 5px solid #989898 !important;
+          }
+        }
+  
+        &.active {
+          @include respond (minWidth768) {
+            border-left: 5px solid #989898 !important;
+          }
+  
+          background-color: #e2e2e2;
+          color: #000;
+        }
+      }
+    }
+  
+    .tab-content {
+      background-color: transparent !important;
+      border: none !important;
+    }
+  }
+  .partner-map{
+    background: #f2f2f2;
+  }
