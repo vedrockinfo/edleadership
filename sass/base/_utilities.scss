@@ -103,9 +103,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
-  background-position: 100% 36%;
-  background-repeat: no-repeat;
+  background-image: $gradientOne;
 
   &.social {
     @include respond (tab-land-after) {
@@ -449,8 +447,11 @@
   figure {
     margin: 0;
     border: 2px solid #fff;
-    outline: 3px solid $colorPrimary;
+    // outline: 3px solid $colorPrimary;
     border-radius: 0 0 10px 10px;
+    img{
+      width: 100%;
+    }
     figcaption{
         background: $colorPrimary;
         color: $colorWhite;
@@ -458,4 +459,50 @@
         padding: 10px 0;
         border-radius: 0 0 10px 10px;
     }
+}
+.external-link{
+  color: $colorPrimary;
+  transition: $transition;
+  &:hover{
+    color: rgba($colorSecondary, 1);
+  }
+}
+
+
+.breadcrumb{
+  justify-content: center;
+  background: transparent!important;
+  .breadcrumb-item{
+    a{
+      color: rgba($colorWhite, 1);
+      text-decoration: underline;
+    }
+    &.active{
+      color: rgba($colorWhite, $alpha: 1);
+    }
+  }
+}
+
+.modal-content {
+  height: 100%;
+}
+
+.modal-content button.btn-close {
+  position: absolute;
+  right: -30px;
+  top: -15px;
+  z-index: 1;
+  filter: invert(1);
+  font-size: 20px;
+}
+
+.modal-content .modal-body {
+  padding: 0;
+}
+
+@include respond (minWidth768){
+  .modal-dialog.modal-dialog-centered {
+    height: calc(100vh - 100px);
+    max-width: calc(100vw - 200px);
+  }
 }

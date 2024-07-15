@@ -109,9 +109,9 @@ h6 {
 .heading-primary {
   line-height: 1.25em;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 75px;
   font-weight: 700;
   color: $colorBlack;
   @include respond(maxWidth992) {
@@ -164,7 +164,7 @@ h6 {
 .sub-heading{
     text-align: center;
     color: $colorSecondary;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -175,6 +175,9 @@ h6 {
 
   @include respond(maxWidth768) {
     margin-bottom: 20px;
+    line-height: 1;
+    font-size: 15px;
+    letter-spacing: 0.2px;
   }
 
   @include respond(maxWidth575) {

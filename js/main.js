@@ -78,9 +78,9 @@ $(document).ready(function () {
 $(".donor-agencies").owlCarousel({
     loop: true,
     margin: 10,
-    nav: true,
+    nav: false,
     navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
-    dots: false,
+    dots: true,
     autoplay: true,
     autoplayTimeout: 3000,
     responsive: {
@@ -126,7 +126,7 @@ $(".globalAdvisor").owlCarousel({
     center: true,
     navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
     dots: false,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 3000,
     responsive: {
         0: {
@@ -182,3 +182,26 @@ $(".donor-agencies").owlCarousel({
         },
     },
 });
+jQuery('.home-gallery').owlCarousel({
+    loop: true,
+    margin: 20,
+    autoplay: false,
+    dots: true,
+    nav: false,
+    responsiveClass: true,
+    autoHeight: true,
+    autoplayTimeout: 3000,
+    smartSpeed: 800,
+    animateOut: 'fadeOut',
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 5
+        }
+    }
+})
