@@ -88,10 +88,10 @@ $(".donor-agencies").owlCarousel({
             items: 1,
         },
         600: {
-            items: 2,
+            items: 1,
         },
         1000: {
-            items: 2,
+            items: 1,
         },
     },
 });
@@ -205,3 +205,107 @@ jQuery('.home-gallery').owlCarousel({
         }
     }
 })
+
+// jQuery code for handling the lightbox functionality
+$(document).ready(function() {
+    // Initialize Bootstrap's lightbox
+    var lightbox = new bootstrap.Modal(document.getElementById('lightboxModal'), {
+      keyboard: true,
+      backdrop: true
+    });
+
+    // Handle clicking on gallery items to show lightbox
+    $('.gallery-item').on('click', function(event) {
+      event.preventDefault();
+      var imageHref = $(this).attr('href');
+      var galleryId = $(this).data('bs-gallery');
+
+      // Clear existing carousel items
+      $('#lightboxCarousel .carousel-inner').empty();
+
+      // Add new carousel items based on the clicked gallery items
+      $(`.gallery-item[data-bs-gallery="${galleryId}"]`).each(function() {
+        var imgSrc = $(this).find('img').attr('src');
+        var imgAlt = $(this).find('img').attr('alt');
+
+        var activeClass = (imgSrc === imageHref) ? 'active' : '';
+
+        var carouselItem = `
+          <div class="carousel-item ${activeClass}">
+            <img src="${imgSrc}" class="d-block" alt="${imgAlt}">
+          </div>
+        `;
+
+        $('#lightboxCarousel .carousel-inner').append(carouselItem);
+      });
+
+      // Show the lightbox modal
+      lightbox.show();
+    });
+  });
+  jQuery('.hero-fade-slides').owlCarousel({
+    loop: true,
+    margin: 20,
+    autoplay: true,
+    dots: false,
+    nav: false,
+    responsiveClass: true,
+    autoHeight: true,
+    autoplayTimeout: 3000,
+    smartSpeed: 800,
+    animateOut: 'fadeOut',
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 1
+        }
+    }
+})
+
+$(".organised").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
+    dots: false,
+    autoplay: false,
+    autoplayTimeout: 3000,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        600: {
+            items: 1,
+        },
+        1000: {
+            items: 3,
+        },
+    },
+});
+
+$(".teachers").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
+    dots: false,
+    autoplay: false,
+    autoplayTimeout: 3000,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        600: {
+            items: 1,
+        },
+        1000: {
+            items: 3,
+        },
+    },
+});

@@ -1,5 +1,5 @@
 $colorPrimary: #014e85;
-$colorSecondary:#EC4E20;
+$colorSecondary:#ea6905;
 $colorTertiary:#014e85;
 $colorBlack:#000;
 $colorWhite: #ffffff;
@@ -14,3 +14,14 @@ $boxShadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 $ExoBold:"Exo Bold", sans-serif;
 $ExoReg:"Exo Regular", sans-serif;
 $ExoThin:"Exo Thin", sans-serif;
+
+
+$icon-clr-one: #c7212f;
+$icon-clr-two: #407f46;
+$icon-clr-three: #14496b;
+
+:root {
+    --icon-clr: #{$icon-clr-one};
+    --icon-clr: #{$icon-clr-two};
+    --icon-clr: #{$icon-clr-three};
+}
