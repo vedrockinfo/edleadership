@@ -589,6 +589,33 @@ figure {
     background: #ffffff;
     border-color: #ffffff !important; }
 
+#backToTop {
+  display: grid;
+  place-content: center;
+  position: fixed;
+  bottom: 50rem;
+  pointer-events: none;
+  right: 1rem;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #ea6905;
+  color: #ffffff;
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  font-size: 18px;
+  opacity: 0;
+  transition: 0.4s cubic-bezier(0.47, 0.02, 0, 1.14);
+  visibility: hidden; }
+  #backToTop.show {
+    opacity: 1;
+    /* Fully visible */
+    pointer-events: visible;
+    bottom: 1rem;
+    visibility: visible; }
+
 footer {
   background-image: linear-gradient(90deg, #219bff 0%, #014e85 100%);
   padding: 7rem 0;
@@ -2822,3 +2849,6 @@ ul.dropdown-menu {
   .conference-area .conference-wrapper .big {
     grid-column: span 2;
     grid-row: span 2; }
+
+.csr-donor .grid-wrapper > div:nth-last-child(-n+22) {
+  display: none; }

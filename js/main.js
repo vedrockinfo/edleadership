@@ -309,3 +309,23 @@ $(".teachers").owlCarousel({
         },
     },
 });
+
+let myButton = document.getElementById("backToTop");
+
+window.onscroll = function () {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500){
+        myButton.classList.add("show");
+    }
+    else {
+        myButton.classList.remove("show");
+    }
+}
+
+myButton.onclick = function (){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}

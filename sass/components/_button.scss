@@ -10,3 +10,30 @@
 .global-btn-five{
     @include GlobalButtonFive();
 }
+#backToTop{
+    display: grid;
+    place-content: center;
+    position: fixed;
+    bottom: 50rem;
+    pointer-events: none;
+    right: 1rem;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: $colorSecondary;
+    color: $colorWhite;
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 18px;
+    opacity: 0;
+    transition: 0.4s cubic-bezier(0.47, 0.02, 0, 1.14);
+    visibility: hidden;
+    &.show {
+        opacity: 1; /* Fully visible */
+        pointer-events: visible;
+        bottom: 1rem;
+        visibility: visible;
+    }
+}
